@@ -49,18 +49,22 @@ const counter = (function () {
 const counterFactory = (function () {
   let count = 0;
   return {
-    value: function (n) {
+    value(n) {
       if (typeof n === 'number') {
         count = n;
         return count;
-      } else {
+      }
+      
+      else {
         return count;
       }
     },
-    increment: function () {
+
+    increment() {
       count++;
     },
-    decrement: function () {
+
+    decrement() {
       count--;
     }
   }
